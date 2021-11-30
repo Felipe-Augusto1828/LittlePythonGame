@@ -44,11 +44,25 @@ class Calcular:
               f'\nDificulty: {self.dificulty} \nOperation: {op}'
     @property
     def _generate_value(self:object) -> int:
-        pass
+        if self.dificulty == 1:
+            return randint(0, 10)
+        elif self.dificulty == 2:
+            return randint(0,100)
+        elif self.dificulty == 3:
+            return randint(0, 1000)
+        elif self.dificulty == 4:
+            return randint(0, 10000)
+        else:
+            return randint(0, 100000)
 
     @property
     def _generate_result(self:object)  -> int:
-        pass
+        if self.operation == 1: #sum
+            return self.value1 + self.value2
+        elif self.operation == 2: #subtract
+            return self.value1 - self.value2
+        else:
+            return self.value1 * self.value2
     
     @property
     def check_result(self: object, response: int) -> bool:

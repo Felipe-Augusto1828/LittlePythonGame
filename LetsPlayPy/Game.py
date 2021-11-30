@@ -19,5 +19,11 @@ def play(points: int) -> None:
 
     proceed: int = int(input('Do you want to continue the game? [1] - yes | [0] - no'))
 
+    if proceed:
+        play(points)
+    else:
+        print(f'You finished with {points} points')
+        print('See you later!')
+
 if __name__ == '__main__':
     main()
