@@ -65,8 +65,26 @@ class Calcular:
             return self.value1 * self.value2
     
     @property
-    def check_result(self: object, response: int) -> bool:
-        pass
-    @property
+    def _op_symbol(self: object) -> str:
+        if self.operation == 1:
+            return '+'
+        elif self.operation == 2:
+            return '-'
+        else:
+            return 'x'
+
+
+    def check_result(self: object, answer: int) -> bool:
+        correct: bool = False
+
+        if self.result == answer:
+            print('Correct answer!')
+            correct = True
+        else:
+            print('Incorrect!')
+        print(f'{self.value1} {self._op_symbol} {self.value2} = {self.result}')
+        return correct
+
+
     def show_operation(self: object) -> None:
-        pass
+        print(f'{self.value1} {self._op_symbol} {self.value2} = ?')

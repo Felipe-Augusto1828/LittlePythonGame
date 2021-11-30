@@ -6,7 +6,7 @@ def main() -> None:
 
 
 def play(points: int) -> None:
-    dificulty: int = int(input('Select dificulty: [1] | [2] | [3] | [4]'))
+    dificulty: int = int(input('Select difficulty: [1] | [2] | [3] | [4] '))
 
     calc: Calcular = Calcular(dificulty)
     print('Inform the result of the following operation: ')
